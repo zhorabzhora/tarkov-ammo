@@ -38,31 +38,26 @@ public class BlankFragment extends Fragment {
         Bundle bundle = getArguments();
 
         bundle.getBundle("JSONObj");
-
-        CharSequence govno = bundle.getBundle("JSONObj").getString("Damage");
-
         bundle = bundle.getBundle("JSONObj");
 
-        String[] uzhe6UtraBozhePomogite = new String[bundle.size()];
+        String[] cartridgeInfo = new String[bundle.size()];
 
-        uzhe6UtraBozhePomogite[0] = "Ammo Type - "+ bundle.getString("Ammo Type");
-        uzhe6UtraBozhePomogite[1] = "Damage - "+ bundle.getString("Damage");
-        uzhe6UtraBozhePomogite[2] = "Pen Value - "+ bundle.getString("Pen Value");
-        uzhe6UtraBozhePomogite[3] = "Armor Damage % - "+ bundle.getString("Armor Damage %");
-        uzhe6UtraBozhePomogite[4] = "Frag. Chance* - "+ bundle.getString("Frag. Chance*");
-        uzhe6UtraBozhePomogite[5] = "Class 1 - "+ bundle.getString("Class 1");
-        uzhe6UtraBozhePomogite[6] = "Class 2 - "+ bundle.getString("Class 2");
-        uzhe6UtraBozhePomogite[7] = "Class 3 - "+ bundle.getString("Class 3");
-        uzhe6UtraBozhePomogite[8] = "Class 4 - "+ bundle.getString("Class 4");
-        uzhe6UtraBozhePomogite[9] = "Class 5 - "+ bundle.getString("Class 5");
-        uzhe6UtraBozhePomogite[10] = "Class 6 - "+ bundle.getString("Class 6");
+        cartridgeInfo[0] = "Ammo Type - "+ bundle.getString("Ammo Type");
+        cartridgeInfo[1] = "Damage - "+ bundle.getString("Damage");
+        cartridgeInfo[2] = "Pen Value - "+ bundle.getString("Pen Value");
+        cartridgeInfo[3] = "Armor Damage % - "+ bundle.getString("Armor Damage %");
+        cartridgeInfo[4] = "Frag. Chance* - "+ bundle.getString("Frag. Chance*");
+        cartridgeInfo[5] = "Class 1 - "+ bundle.getString("Class 1");
+        cartridgeInfo[6] = "Class 2 - "+ bundle.getString("Class 2");
+        cartridgeInfo[7] = "Class 3 - "+ bundle.getString("Class 3");
+        cartridgeInfo[8] = "Class 4 - "+ bundle.getString("Class 4");
+        cartridgeInfo[9] = "Class 5 - "+ bundle.getString("Class 5");
+        cartridgeInfo[10] = "Class 6 - "+ bundle.getString("Class 6");
+
 
         ListView listView = root.findViewById(R.id.listViewChild123);
-
-
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),
-                android.R.layout.simple_list_item_1, uzhe6UtraBozhePomogite);
-
+                android.R.layout.simple_list_item_1, cartridgeInfo);
         listView.setAdapter(adapter);
 
 
@@ -70,11 +65,11 @@ public class BlankFragment extends Fragment {
         return root;
     }
 
-    @Override
+    /*@Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         mViewModel = new ViewModelProvider(this).get(BlankViewModel.class);
         // TODO: Use the ViewModel
-    }
+    }*/
 
 }

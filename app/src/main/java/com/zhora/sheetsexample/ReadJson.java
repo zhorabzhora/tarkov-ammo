@@ -2,7 +2,6 @@ package com.zhora.sheetsexample;
 
 import android.app.*;
 import android.os.*;
-import android.util.*;
 
 import androidx.annotation.*;
 
@@ -20,7 +19,7 @@ public class ReadJson {
         String stringy = null;
 
         try{
-            InputStream inputStream = activity.getAssets().open("sheesh.json");
+            InputStream inputStream = activity.getAssets().open("ammo.json");
             int size = inputStream.available();
             byte[] byteArray = new byte[size];
             inputStream.read(byteArray);
@@ -46,12 +45,6 @@ public class ReadJson {
             e.printStackTrace();
         }
         JSONObject arrayObject = null;
-        /*try {
-            arrayObject = array.getJSONObject(0);
-
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }*/
 
 
 

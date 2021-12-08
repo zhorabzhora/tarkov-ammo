@@ -3,4 +3,7 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Ammo</string>
     <string name="title_notifications">Notifications</string>
+    <string name="main_title">крутое приложение</string>
+    <string name="main_desc">тарков патроны</string>
+    <string name="logo">logo</string>
 </resources>
